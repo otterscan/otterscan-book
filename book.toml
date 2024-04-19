@@ -1,0 +1,6 @@
+[book]
+authors = ["Otterscan contributors"]
+language = "en"
+multilingual = false
+src = "src"
+title = "The Otterscan Book"
