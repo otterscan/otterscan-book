@@ -2,7 +2,7 @@
 
 Since *The Merge*, running a consensus layer node (CL) is required alongside the execution layer node (EL).
 
-For merged chains, Otterscan can optionally display CL information.
+For merged chains, Otterscan can optionally display CL information. Most known merged chains are Ethereum and Gnosis (mainnet and testnets).
 
 - [Beacon chain support overview](./overview.md)
 
