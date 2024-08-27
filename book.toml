@@ -4,3 +4,7 @@ language = "en"
 multilingual = false
 src = "src"
 title = "The Otterscan Book"
+
+[output.html]
+git-repository-url = "https://github.com/otterscan/otterscan-book"
+edit-url-template = "https://github.com/otterscan/otterscan-book/edit/main/{path}"
