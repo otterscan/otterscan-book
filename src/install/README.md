@@ -14,6 +14,10 @@ Otterscan is a *merged explorer*, which means it can optionally display beacon c
 
 - [Enabling beacon chain support](./beacon-chain/)
 
+Otterscan v2.x has some *EXPERIMENTAL* extra indexers.
+
+- [Enable OTS2 experimental indexers](./ots2.md)
+
 Once you finish installing it, you can check if everything is working as expected.
 
 - [Validating the installation](./validating.md)

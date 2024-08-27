@@ -14,6 +14,7 @@
       - [Lighthouse](./install/beacon-chain/lighthouse.md)
       - [Caplin](./install/beacon-chain/caplin.md)
     - [Enabling in Otterscan](./install/beacon-chain/otterscan.md)
+  - [Experimental OTS2 indexers](./install/ots2.md)
   - [Superchain support]()
   - [Other](./install/other.md)
   - [Validating](./install/validating.md)
