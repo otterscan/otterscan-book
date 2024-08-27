@@ -31,6 +31,7 @@
 - [API Spec](./api-docs/README.md)
   - [FAQ](./api-docs/faq.md)
   - [ots namespace spec](./api-docs/ots-api.md)
+  - [ots2 EXPERIMENTAL namespace spec](./api-docs/ots2-api.md)
 - [Public instances](./public_instances.md)
 - [Commercial offerings](./commercial_offerings.md)
 - [Getting in touch](./contacts.md)

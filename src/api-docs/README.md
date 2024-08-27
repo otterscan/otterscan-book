@@ -13,3 +13,7 @@ There is an ongoing effort to formalize the Otterscan API spec in the same forma
 A more detailed explanation of the `ots` namespace:
 
 - [ots namespace spec](./ots-api.md)
+
+There is an experimental `ots2` namespace, which is likely to change, but here is an overview:
+
+- [ots2 namespace spec](./ots2-api.md)
