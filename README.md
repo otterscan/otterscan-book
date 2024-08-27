@@ -1,6 +1,6 @@
 # The Otterscan Book
 
-This is the official Otterscan documentation.
+This is the official Otterscan documentation. View it online at <https://docs.otterscan.io/>.
 
 It is built on [mdbook](https://rust-lang.github.io/mdBook/). Please take a look at its install instructions first.
 
