@@ -2,7 +2,7 @@
 
 Otterscan makes use of on-chain [Chainlink data feeds](https://docs.chain.link/data-feeds/price-feeds) for fetching historical price data from Chainlink smart contracts compatible with the [AggregatorV3 interface](https://docs.chain.link/data-feeds/api-reference) which act as price oracles. The native token price is fetched from a Chainlink data feed smart contract.
 
-Ethereum mainnet has a registry which Otterscan uses to look up token prices for supported tokens. On other chains, and for tokens not in the registry, Otterscan can estimate a token's price using information from on-chain decentralized exchanges.
+The Ethereum mainnet has a registry which Otterscan uses to look up token prices for supported tokens. On other chains, and for tokens not in the registry, Otterscan can estimate a token's price using information from on-chain decentralized exchanges.
 
 > **NOTE:** The prices estimated from on-chain decentralized exchanges can be manipulated, especially when tokens have low liquidity or are unable to be traded normally. This price estimation feature returns "best guess" prices; Otterscan certainly cannot guarantee that all tokens with an estimated price have a liquid market or that the prices shown are accurate.
 

@@ -26,7 +26,7 @@
     - [Branding](./config/options/branding.md)
     - [Optimism](./config/options/optimism.md)
     - [Price oracles](./config/options/oracles.md)
-    - [Recognizing non standard chains](./config/options/chains.md)
+    - [Recognizing nonstandard chains](./config/options/chains.md)
 - [User guide]()
 - [API Spec](./api-docs/README.md)
   - [FAQ](./api-docs/faq.md)

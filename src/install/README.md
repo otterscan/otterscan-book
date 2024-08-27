@@ -2,7 +2,7 @@
 
 First of all, make sure you have a working and synced Erigon instance. Setting up Erigon is out of scope of this book.
 
-Otterscan support is already embedded in every Erigon node >= `v2.29.0`. You just need to enable it.
+Otterscan RPC support is already embedded in every Erigon node >= `v2.29.0`. You just need to enable it.
 
 - [Enabling Otterscan support in Erigon](./erigon.md)
 
