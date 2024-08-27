@@ -14,9 +14,9 @@ It is a React SPA and the repository is available at: <https://github.com/otters
 
 ## Otterscan API Specification
 
-It is a set of API definitions Otterscan UI depends on.
+It is a set of node-level API definitions Otterscan UI depends on.
 
-There is an ongoing effort to formalize the Otterscan API spec in the same format as the standard JSON-RPC APIs, the repository is at: <https://github.com/otterscan/execution-apis>.
+See more [here](../api-docs).
 
 ## Otterscan API Implementation
 
