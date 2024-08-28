@@ -15,3 +15,7 @@ Price resolvers can be customized as well.
 If you are running Otterscan against a non-standard chain, but you are sure Erigon can run it, you can explicitly specify the configuration.
 
 - [Recognizing nonstandard chains](./chains.md)
+
+In case you are running your own Sourcify instance, that's configurable as well.
+
+- [Alternative Sourcify sources](./sourcify.md)
