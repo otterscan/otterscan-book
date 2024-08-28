@@ -1,3 +1,3 @@
 # Contract Verification
 
-We display contract verification info from  [Sourcify](https://sourcify.dev/).
+We display verified contracts using information from [Sourcify](https://sourcify.dev/).

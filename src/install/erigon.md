@@ -1,6 +1,6 @@
 # Running Otterscan with Erigon
 
-## Enable the Otterscan namespace on erigon
+## Enable the Otterscan RPC namespace in Erigon
 
 When running Erigon, make sure to enable the `eth`, `erigon` and `ots` namespaces in addition to whatever CLI options you are using to start Erigon.
 
@@ -12,7 +12,7 @@ Enabling namespaces in Erigon is done through the `--http.api` argument.
 erigon --http.api "eth,erigon,ots[,<other-namespaces>]" [<other CLI arguments...>]
 ```
 
-> `ots` stands for Otterscan and it is the JSON-RPC namespace we use for our own custom APIs.
+> `ots` stands for Otterscan, and it is the JSON-RPC namespace we use for our own custom APIs.
 
 ## Enable CORS
 

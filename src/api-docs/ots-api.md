@@ -10,13 +10,13 @@ We take an incremental approach when design the APIs, so there may be some metho
 
 Those APIs are implemented at EL-client level under the `ots` JSON-RPC namespace.
 
-## How to use it?
+## How do I use it?
 
 They are all JSON-RPC methods, so your favorite web3 library _should_ have some way to custom call them.
 
 For example, [ethers.js](https://github.com/ethers-io/ethers.js) wraps standard calls in nice, user-friendly classes and parses results into easy-to-use objects, but also allows you to do custom calls and get raw results while still taking advantage of their capabilities like automatic batching, network timeout handling, etc.
 
-I'll use ethers.js as an example here because it is what I use in Otterscan, please check your web3 library docs for custom call support.
+I'll use ethers.js as an example here because it is what I use in Otterscan. Please check your web3 library docs for custom call support.
 
 ### Example
 
@@ -35,20 +35,20 @@ All methods are prefixed with the `ots_` namespace in order to make it clear it 
 | Name              | Description      | Reasoning |
 |-------------------|------------------|-----------|
 | `ots_getApiLevel`           | Totally Otterscan internal API, absolutely no reason for anything outside Otterscan to use it. | Used by Otterscan to check if it's connecting to a compatible patched Erigon node and display a friendly message if it is not. |
-| `ots_getInternalOperations` | Return the internal ETH transfers inside a transaction. | For complex contract interactions, there may be internal calls that forward ETH between addresses. A very common example is someone swapping some token for ETH, in this case there is an ETH send to the sender address which is only unveiled by examining the internal calls. |
-| `ots_hasCode`               | Check if a certain address contains a deployed code. | A common way to check if an address is a contract or an EOA is calling `eth_getCode` to see if it has some code deployed. However this call is expensive regarding this purpose, as it returns the entire contract code over the network just for the client to check its presence. This call just returns a boolean. |
-| `ots_getTransactionError`   | Extract the transaction raw error output. | In order to get the error message or custom error from a failed transaction, you need to get its error output and decoded it. This info is not exposed through standard APIs. |
-| `ots_traceTransaction`      | Extract all variations of calls, contract creation and self-destructs and returns a call tree. | This is an optimized version of tracing; regular tracing returns lots of data, and custom tracing using a JS tracer could be slow. |
-| `ots_getBlockDetails`       | Tailor-made and expanded version of `eth_getBlock*` for block details page in Otterscan. | The standard `eth_getBlock*` is quite verbose and it doesn't bring all info we need. We explicitly remove the transaction list (unnecessary for that page and also this call doesn't scale well), log blooms and other unnecessary fields. We add issuance and block fees info and return all of this in just one call. |
-| `ots_getBlockDetailsByHash` | Same as `ots_getBlockDetails`, but it accepts a block hash as parameter. | |
-| `ots_getBlockTransactions`  | Get paginated transactions for a certain block. Also remove some verbose fields like logs. | As block size increases, getting all transactions from a block at once doesn't scale, so the first point here is to add pagination support. The second point is that receipts may have big, unnecessary information, like logs. So we cap all of them to save network bandwidth. |
-| `ots_searchTransactionsBefore` and `ots_searchTransactionsAfter` | Gets paginated inbound/outbound transaction calls for a certain address. | There is no native support for any kind of transaction search in the standard JSON-RPC API. We don't want to introduce an additional indexer middleware in Otterscan, so we implemented in-node search. |
-| `ots_getTransactionBySenderAndNonce` | Gets the transaction hash for a certain sender address, given its nonce. | There is no native support for this search in the standard JSON-RPC API. Otterscan needs it to allow user navigation between nonces from the same sender address. |
-| `ots_getContractCreator` | Gets the transaction hash and the address who created a contract. | No way to get this info from the standard JSON-RPC API. |
+| `ots_getInternalOperations` | Returns the internal ETH transfers inside a transaction. | For complex contract interactions, there may be internal calls that forward ETH between addresses. A very common example is someone swapping some token for ETH, in which case there is an ETH send to the sender address which is only unveiled by examining the internal calls. |
+| `ots_hasCode`               | Check if a certain address contains deployed code. | A common way to check if an address is a contract or an EOA is calling `eth_getCode` to see if it has some code deployed. However this call is expensive data-wise if the contract has a lot of deployed code. This call just returns a boolean. |
+| `ots_getTransactionError`   | Extract the transaction's raw error output. | In order to get the error message or custom error from a failed transaction, you need to get its error output and decode it. This info is not exposed through standard APIs. |
+| `ots_traceTransaction`      | Extract all variations of calls, contract creations, and self-destructs and return a call tree. | This is an optimized version of tracing; regular tracing returns lots of data, and custom tracing using a JS tracer could be slow. |
+| `ots_getBlockDetails`       | Tailor-made and expanded version of `eth_getBlock*` for the block details page in Otterscan. | The standard `eth_getBlock*` is quite verbose and it doesn't bring all info we need. We explicitly remove the transaction list (unnecessary for that page and also this call doesn't scale well), log blooms, and other unnecessary fields. We add issuance and block fees info to the response. |
+| `ots_getBlockDetailsByHash` | Same as `ots_getBlockDetails`, but it accepts a block hash as a parameter. | |
+| `ots_getBlockTransactions`  | Get paginated transactions for a certain block. Also remove some verbose fields like logs. | As the block size increases, getting all transactions from a block at once doesn't scale, so the first point here is to add pagination support. The second point is that receipts may have big, unnecessary information, like logs. So we cap all of them to save network bandwidth. |
+| `ots_searchTransactionsBefore` and `ots_searchTransactionsAfter` | Gets paginated inbound/outbound transaction calls for a certain address. | There is no native support for any kind of transaction search in the standard JSON-RPC API. We don't want to introduce additional indexer middleware in Otterscan, so we implemented an in-node search. |
+| `ots_getTransactionBySenderAndNonce` | Gets the transaction hash for a certain sender address, given its nonce. | There is no native support for this search in the standard JSON-RPC API. Otterscan needs it to enable navigation between nonces from the same sender address. |
+| `ots_getContractCreator` | Gets the transaction hash and the address which created a contract. | No way to get this info from the standard JSON-RPC API. |
 
 ## Method details
 
-> Some methods include a sample call so you call try it from cli. The examples use `curl` and assume you are running `rpcdaemon` at `http://127.0.0.1:8545`.
+> Some methods include a sample call so you call try it from the CLI. The examples use `curl` and assume you are running `rpcdaemon` at `http://127.0.0.1:8545`.
 
 ### `ots_getApiLevel`
 
@@ -64,7 +64,7 @@ Returns:
 
 ### `ots_getInternalOperations`
 
-Trace internal ETH transfers, contracts creation (CREATE/CREATE2) and self-destructs for a certain transaction.
+Trace internal ETH transfers, contract creations (CREATE/CREATE2) and self-destructs for a certain transaction.
 
 Parameters:
 
@@ -78,7 +78,7 @@ The operation is an object with the following fields:
 
 - `type` - transfer (`0`), self-destruct (`1`), create (`2`) or create2 (`3`).
 - `from` - the ETH sender, contract creator or contract address being self-destructed.
-- `to` - the ETH receiver, newly created contract address or the target ETH receiver resulting of the self-destruction.
+- `to` - the ETH receiver, newly created contract address or the target ETH receiver of a self-destruct.
 - `value` - the amount of ETH transferred.
 
 ### `ots_hasCode`
@@ -112,7 +112,7 @@ Response:
 }
 ```
 
-Example 2: does Vitalik's public address have a code deployed? (no, it is an EOA)
+Example 2: Does Vitalik's public address have code deployed to it? (no, it is an EOA)
 
 Request:
 
@@ -150,7 +150,7 @@ The returned byte blob should be ABI decoded in order to be presented to the use
 
 For instance, the most common error format is a `string` revert message; in this case, it should be decoded using the `Error(string)` method selector, which will allow you to extract the string message.
 
-If it is not the case, it should probably be a solidity custom error, so you must have the custom error ABI in order to decoded it.
+If this is not the case, it is probably a Solidity custom error, so you must have the custom error ABI in order to decode it.
 
 Parameters:
 
@@ -158,9 +158,9 @@ Parameters:
 
 Returns:
 
-- `string` containing the hexadecimal-formatted error blob or simply a "0x" if the transaction was successfully executed. It is returns "0x" if it failed with no revert reason or out of gas, make sure to analyze this return value together with the transaction success/fail result.
+- `string` containing the hexadecimal-formatted error blob or simply a "0x" if the transaction was successfully executed. It returns "0x" if it failed with no revert reason or out of gas, so make sure to analyze this return value together with the transaction success/fail result.
 
-Example: get the revert reason of a random transaction spotted in the wild to Uniswap V3.
+Example: get the revert reason of a random Uniswap v3 transaction spotted in the wild.
 
 Request:
 
@@ -192,7 +192,7 @@ Returns:
 
 - `object` in a format _similar_ to the one returned by `eth_getBlockByNumber/Hash` (please refer to their docs), with some small differences:
   - the block data comes nested inside a `block` attribute.
-  - the `transactions` attribute is not returned. The reason is that it doesn't scale, the standard methods return either the transaction hash list or the transaction list with their bodies. So we cap the transaction list entirely to avoid unnecessary network traffic.
+  - the `transactions` attribute is not returned. We remove the transaction list entirely to avoid unnecessary network traffic.
   - the transaction count is returned in a `transactionCount` attribute.
   - the `logsBloom` attribute comes with `null`. It is a byte blob that is rarely used, so we cap it to avoid unnecessary network traffic.
   - an extra `issuance` attribute returns an `object` with the fields:
@@ -209,40 +209,40 @@ The `transactions` field contains the transaction list with their bodies in a si
 
 - the `input` field returns only the 4 bytes method selector instead of the entire calldata byte blob.
 
-The `receipts` attribute contains the transactions receipt list, in the same sort order as the block transactions. Returning it here avoid the caller of making N+1 calls (`eth_getBlockBy*` and `eth_getTransactionReceipt`).
+The `receipts` attribute contains the transactions receipt list, in the same sort order as the block transactions. Returning it here prevents the caller from making N+1 separate calls (`eth_getBlockBy*` and `eth_getTransactionReceipt`).
 
-For receipts, it contains some differences from the `eth_getTransactionReceipt` object format:
+For receipts, it differs from the `eth_getTransactionReceipt` object format:
 
 - `logs` attribute returns `null`.
 - `logsBloom` attribute returns `null`.
 
 ### `ots_searchTransactionsBefore` and `ots_searchTransactionsAfter`
 
-These are address history navigation methods. They are similar, the difference is `ots_searchTransactionsBefore` searches the history backwards and `ots_searchTransactionsAfter` searches forward a certain point in time.
+These are address history navigation methods. They are similar, but `ots_searchTransactionsBefore` searches the history backward and `ots_searchTransactionsAfter` searches forward a certain point in time.
 
-They are paginated, you **MUST** inform the page size. Some addresses like exchange addresses or very popular DeFi contracts like Uniswap Router will return millions of results.
+They are paginated, so you **MUST** include a page size. Some addresses like exchange addresses or very popular DeFi contracts like a Uniswap router will return millions of results.
 
 They return inbound (`to`), outbound (`from`) and "internal" transactions. By internal it means that if a transaction calls a contract and somewhere in the call stack it sends ETH to the address you are searching for or the address is a contract and it calls a method on it, the transaction is matched and returned in the search results.
 
 Parameters:
 
 1. `address` - The ETH address to be searched.
-2. `blockNumber` - It searches for occurrences of `address` before/after `blockNumber`. A value of `0` means you want to search from the most recent block (`ots_searchTransactionsBefore`) or from the genesis (`ots_searchTransactionsAfter`).
+2. `blockNumber` - It searches for occurrences of `address` before/after `blockNumber`. A value of `0` means you want to search from the most recent block (`ots_searchTransactionsBefore`) or from the genesis block (`ots_searchTransactionsAfter`).
 3. `pageSize` - How many transactions it may return. See the detailed explanation about this parameter below.
 
 Returns:
 
 - `object` containing the following attributes:
-  - `txs` - An array of objects representing the transaction results. The results are returned sorted from the most recent to the older one (descending order).
+  - `txs` - An array of objects representing the transaction results. The results are always returned sorted from the most recent to the oldest one (in descending chronological order).
   - `receipts` - An array of objects containing the transaction receipts for the transactions returned in the `txs` attribute.
   - `firstPage` - Boolean indicating this is the first page. It should be `true` when calling `ots_searchTransactionsBefore` with `blockNumber` == 0 (search from `latest`); because the results are in descending order, the search from the most recent block is the "first" one. It should also return `true` when calling `ots_searchTransactionsAfter` with a `blockNumber` which results in no more transactions after the returned ones because it searched forward up to the tip of the chain.
   - `lastPage` - Boolean indicating this is the last page. It should be `true` when calling `ots_searchTransactionsAfter` with `blockNumber` == 0 (search from genesis); because the results are in descending order, the genesis page is the "last" one. It should also return `true` when calling `ots_searchTransactionsBefore` with a `blockNumber` which results in no more transactions before the returned ones because it searched backwards up to the genesis block.
 
-There is a small gotcha regarding `pageSize`. If there are less results than `pageSize`, they are just returned as is.
+There is a small gotcha regarding `pageSize`. If there are fewer results than `pageSize`, they are just returned as is.
 
-But if there are more than `pageSize` results, they are capped by the last found block. For example, let's say you are searching for Uniswap Router address and it already found 24 matches; it then looks at the next block containing this addresses occurrences and there are 5 matches inside the block. They are all returned, so it returns 30 transaction results. The caller code should be aware of this.
+But if there are more than `pageSize` results, they are capped by the last found block. For example, let's say you are searching for Uniswap Router address with a `pageSize` of 25, and it already found 24 matches. It then looks at the next block containing this address's occurrences and there are 5 matches inside the block. They are all returned, so it returns 30 transaction results. The caller code should be aware of this.
 
-Example: get the first 5 transactions that touched Uniswap V1 router (including the contract creation).
+Example: get the first 5 transactions that touched Uniswap V1 router (which includes the contract creation).
 
 Request:
 
@@ -318,9 +318,9 @@ Returns:
 
 - `object` containing the following attributes, or `null` if the address does not contain a contract.
   - `hash` - The tx hash of the transaction who created the contract.
-  - `creator` - The address who directly created the contract. Note that for simple transactions that directly deploy a contract this corresponds to the EOA in the `from` field of the transaction. For deployer contracts, i.e., the contract is created as a result of a method call, this corresponds to the address of the contract who created it.
+  - `creator` - The address which created the contract. Note that for simple transactions that directly deploy a contract this corresponds to the EOA in the `from` field of the transaction. For deployer contracts, i.e., the contract is created as a result of a method call, this corresponds to the address of the contract which created it.
 
-Example: get who created the Uniswap V3 Router contract.
+Example: get the address which deployed the Uniswap V3 Router contract.
 
 Request:
 

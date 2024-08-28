@@ -14,4 +14,4 @@ Price resolvers can be customized as well.
 
 If you are running Otterscan against a non-standard chain, but you are sure Erigon can run it, you can explicitly specify the configuration.
 
-- [Recognizing non standard chains](./chains.md)
+- [Recognizing nonstandard chains](./chains.md)

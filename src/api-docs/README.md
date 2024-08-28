@@ -2,7 +2,7 @@
 
 > This chapter only makes sense if you intend to dive deep into Otterscan source code or want to integrate directly with the Otterscan APIs.
 
-First, some little context about why we chose that approach of implementating API directly inside Ethereum clients.
+First, some context about why we chose the approach of implementing a custom API directly inside Ethereum clients.
 
 - [FAQ](./faq.md)
 

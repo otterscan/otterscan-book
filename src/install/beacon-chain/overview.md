@@ -1,6 +1,6 @@
 # Overview
 
-Like EL has *blocks* and *transactions*, CL has its own set of data structures. It is possible to read this information from CL through a standardized [Beacon Chain REST API](https://ethereum.github.io/beacon-APIs/).
+Like the EL, which has *blocks* and *transactions*, CL has its own set of data structures. It is possible to read this information from CL through a standardized [Beacon Chain REST API](https://ethereum.github.io/beacon-APIs/).
 
 ## Gotchas
 
@@ -10,21 +10,21 @@ We have been mainly using/testing both [Lighthouse](https://github.com/sigp/ligh
 
 It is out-of-scope of this document to review all existing CL implementations.
 
-Let's now describe in more details some issues we noticed.
+Let's now describe in more detail some issues we noticed.
 
 ## Checkpoint vs. genesis sync
 
 Checkpoint sync is a nice feature that allows you to "jump" directly to a finalized slot and have a functional CL node in a matter of minutes.
 
-However doing that you won't have the historical information, i.e., you won't be able to explore older slots, epochs, etc.
+However, by doing that you won't have the details of historical slots, epochs, etc.
 
-That may not be such a problem if you are only concerned with your current validator balance, for example. Just be aware of that.
+That may not be a problem if you are only concerned with your current validator balance, for example. Just be aware of that.
 
-The alternative if you want to browse all beacon chain history is to do a genesis sync, but that is very slow on mainnet.
+The alternative, if you want to browse all beacon chain history, is to do a genesis sync, but that is very slow on mainnet.
 
 ## Backfilling
 
-Some CL implementations (e.g. [Lighthouse](https://github.com/sigp/lighthouse/)) have a nice feature called *backfilling*, where you can do a checkpoint sync, have a functional CL node in minutes, but it downloads historical information in background.
+Some CL implementations (e.g. [Lighthouse](https://github.com/sigp/lighthouse/)) have a nice feature called *backfilling*, where you can do a checkpoint sync and have a functional CL node in minutes, while historical information is downloaded in background.
 
 That may be a better alternative to genesis sync if you want to have all historical info.
 

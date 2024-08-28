@@ -1,6 +1,6 @@
 # Development
 
-During development time, define a `VITE_CONFIG_JSON` variable inside a `.env.development.local` file and vite will use those settings automatically.
+During development, define a `VITE_CONFIG_JSON` variable inside a `.env.development.local` file, and vite will use those settings automatically.
 
 Otterscan uses [dotenv](https://github.com/motdotla/dotenv), and that file is automatically `.gitignore`'d and not pushed into version control.
 

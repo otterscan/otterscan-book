@@ -1,12 +1,12 @@
 # Supported Networks
 
-Otterscan runs on any network that has a client implementing the Otterscan API.
+Otterscan runs on any network that has a client implementing the Otterscan API. Below is a non-exhaustive list.
 
 ## Erigon
 
 - Ethereum
   - Mainnet
-  - Sepolia and holesky testnets
+  - Sepolia and Holesky testnets
 - Gnosis Chain
   - Gnosis mainnet
   - Chiado testnet

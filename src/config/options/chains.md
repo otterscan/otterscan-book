@@ -1,4 +1,4 @@
-# Recognizing non standard chains
+# Recognizing nonstandard chains
 
 By default, Otterscan recognizes several chains, including the Ethereum mainnet and several Ethereum test networks. For other chains, specify either **(1)** a `chainInfo` key in the Otterscan config, or **(2)** create a JSON file accessible at `{assetsURLPrefix}/chains/eip155-{chainId}.json`. In both cases, use the [ethereum-lists](https://github.com/ethereum-lists/chains) structure to describe the properties of the chain:
 
