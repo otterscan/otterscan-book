@@ -36,7 +36,6 @@
 - [Contract verification](./contract-verification/README.md)
   - [Sourcify](./contract-verification/sourcify/README.md)
     - [Integration modes](./contract-verification/sourcify/integration-modes.md)
-    - [Verification](./contract-verification/sourcify/verification.md)
   - [Self-hosted Sourcify](./contract-verification/self-hosted-sourcify/README.md)
     - [Setup](./contract-verification/self-hosted-sourcify/setup.md)
     - [Verification](./contract-verification/self-hosted-sourcify/verification.md)
