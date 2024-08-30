@@ -2,7 +2,7 @@
 
 ## Verifying through the Sourcify UI
 
-You can verify contracts using the Sourcify UI by going to http://localhost:3000/#/verifier in your browser.
+You can verify contracts using the Sourcify UI by going to <http://localhost:3000/#/verifier> in your browser.
 
 ## Verifying with Forge
 

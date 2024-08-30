@@ -1,13 +1,13 @@
 # Sourcify
 
-We don't want to reinvent the wheel, so we outsource and consume data from [Sourcify](https://sourcify.dev/).
+Otterscan consumes verified smart contract source code and metadata from [Sourcify](https://sourcify.dev/).
 
-> **TLDR;** Sourcify is open source, their data is public and they host a public instance of the verifier.
+> Sourcify is open source, their data is public and they host a public instance of the verifier.
 
-There are multiple ways to consume verified contract data we support.
+Otterscan supports multiple ways to consume verified contract data.
 
 - [Integration modes](./integration-modes.md)
 
-If you are a smart contract developer and wants to verify it in their platform, here is a quick guide to do so:
+If you are a smart contract developer who wants to verify a smart contract on a Sourcify repository, here is a quick guide to do so:
 
 - [Verification](./verification.md)

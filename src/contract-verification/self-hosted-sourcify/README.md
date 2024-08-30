@@ -2,10 +2,10 @@
 
 This section presents a short guide to self-host a local Sourcify instance.
 
-Setup a local Sourcify instance.
+Set up a local Sourcify instance.
 
-- [Setup local Sourcify](./setup.md)
+- [Set up local Sourcify](./setup.md)
 
-Verify a sample contract on it.
+Verify a contract on a Sourcify instance.
 
 - [Verify](./verification.md)

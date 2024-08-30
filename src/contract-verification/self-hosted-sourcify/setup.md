@@ -44,7 +44,7 @@ You can adjust the chain ID `1337` and the RPC host `http://localhost:8545` as n
 REACT_APP_REPOSITORY_SERVER_URL=http://localhost:5555/repository
 ```
 
-4. Build all needed Sourcify components, notably the server and the UI:
+4. Build all necessary Sourcify components, notably the server and the UI:
 
 ```shell
 npm run build:clean

@@ -8,6 +8,6 @@ We use Sourcify and the next section explains how the integration works.
 
 - [Sourcify](./sourcify/)
 
-In case you want to run Sourcify against a devnet or a custom chain not enabled in their hosted service, you can run your own instance of Sourcify and make Otterscan use it.
+In case you want to run Sourcify against a devnet or a custom chain not enabled in Sourcify's official hosted service, you can run your own instance of Sourcify and point Otterscan to it.
 
 - [Self-hosted Sourcify](./self-hosted-sourcify/)
