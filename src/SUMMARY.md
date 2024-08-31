@@ -36,4 +36,4 @@
 - [Commercial offerings](./commercial_offerings.md)
 - [Getting in touch](./contacts.md)
 - [Acknowledgments](./acknowledgments.md)
-- [Licensing](./licensing.md)
+- [License](./license.md)
