@@ -1,12 +1,12 @@
 # Running Otterscan on Pectra devnet-2
 
-At the time of this writing (Aug/2024), the next expected Ethereum hardfork is **Pectra** and **devnet-2** is up.
+At the time of this writing (Aug 2024), the next expected Ethereum hardfork is **Pectra** and **devnet-2** is up.
 
 > 💡 This document may be updated for future devnets as Erigon becomes stable enough to sync them.
 
 It is possible to run Otterscan against this devnet with some known limitations.
 
-- Pectra-specific features are still in development in Otterscan. Otterscan should work fine, but EIP-7702 transactions should not display correctly or generate some UI errors, for example.
+- Pectra-specific features are still in development in Otterscan. Otterscan should work fine, but EIP-7702 transactions may not display correctly or may generate UI errors, for example.
 - It requires a dev build of Erigon 3 alpha.
 - Caplin (Erigon internal CL) still doesn't support Electra. For CL, it requires a dev build of Lighthouse.
 
@@ -16,7 +16,7 @@ It is possible to run Otterscan against this devnet with some known limitations.
   ```shell
   git clone https://github.com/ethpandaops/pectra-devnets
   ```
-- Consider this directory is `$PECTRA_DEVNETS` for the rest of this document.
+- Set `$PECTRA_DEVNETS` to be this `pectra-devnets` directory.
 
 ## Run Erigon
 
@@ -26,7 +26,7 @@ It is possible to run Otterscan against this devnet with some known limitations.
   cd erigon
   make erigon
   ```
-- Initialize the chaindata with the devnet-2 spec. Consider `$ERIGON_DATADIR` is the EL datadir.
+- Initialize the chaindata with the devnet-2 spec. Consider `$ERIGON_DATADIR` to be the EL datadir.
   ```shell
   build/bin/erigon init --datadir=$ERIGON_DATADIR $PECTRA_DEVNETS/network-configs/devnet-2/metadata/genesis.json
   ```
@@ -45,7 +45,7 @@ It is possible to run Otterscan against this devnet with some known limitations.
 
 ## Run Lighthouse
 
-- Checkout and build the `unstable` branch of Lighthouse.
+- Check out and build the `unstable` branch of Lighthouse.
   ```shell
   git clone -b unstable https://github.com/sigp/lighthouse
   cd lighthouse
