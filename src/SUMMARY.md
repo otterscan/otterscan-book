@@ -41,6 +41,8 @@
     - [Verification](./contract-verification/self-hosted-sourcify/verification.md)
 - [Public instances](./public_instances.md)
 - [Commercial offerings](./commercial_offerings.md)
+- [Cookbook](./cookbook/README.md)
+  - [Running Otterscan on Pectra devnet-2](./cookbook/pectra-devnet-2.md)
 - [Getting in touch](./contacts.md)
 - [Acknowledgments](./acknowledgments.md)
 - [License](./license.md)
