@@ -1,6 +1,10 @@
 # Installation
 
-First of all, make sure you have a working and synced Erigon instance. Setting up Erigon is out of scope of this book.
+First of all, take a look at how we envision all Otterscan components should connect to each other. Understanding this architecture will make it easier to solve common network issues.
+
+- [Architecture overview](./architecture.md)
+
+Make sure you have a working and synced Erigon instance. Setting up Erigon is out of scope of this book.
 
 Otterscan RPC support is already embedded in every Erigon node >= `v2.29.0`. You just need to enable it.
 
