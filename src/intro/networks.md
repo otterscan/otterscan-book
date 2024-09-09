@@ -13,6 +13,7 @@ Otterscan runs on any network that has a client implementing the Otterscan API. 
 - Polygon
   - Polygon PoS
   - Amoy testnet
+- [Ephemery testnet](../cookbook/ephemery.md)
 
 ## OP-Erigon
 
