@@ -8,7 +8,7 @@ You can verify contracts using the Sourcify UI by going to <http://localhost:300
 
 1. If you deploy using a [Forge script](https://book.getfoundry.sh/reference/forge/forge-script), you should add the following contract verification arguments to the command:
 
-```shell
+```sh
 forge script Deploy.s.sol .... \
   --verify \
   --verifier sourcify \
@@ -19,7 +19,7 @@ forge script Deploy.s.sol .... \
 
 Here is how you would deploy a smart contract called `MyContract` with constructor arguments `0x67b1d87101671b127f5f8714789C7192f7ad340e` and `123456`:
 
-```shell
+```sh
 ./forge create \
   --verify \
   --verifier sourcify \
@@ -32,7 +32,7 @@ Here is how you would deploy a smart contract called `MyContract` with construct
 
 3. To verify a contract that already has been deployed, you can use `forge verify-contract`. Here is an example of a verification of the above `MyContract` contract example to address `0xADC11306fcD68F47698D66047d923a52816Ee44F`. Forge can usually infer constructor arguments automatically:
 
-```shell
+```sh
 ./forge verify-contract \
   --verifier sourcify \
   --verifier-url http://localhost:5555/ \

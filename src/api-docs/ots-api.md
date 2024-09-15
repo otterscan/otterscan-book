@@ -98,7 +98,7 @@ Example 1: does Uniswap V1 Router address have a code deployed? (yes, it is a co
 
 Request:
 
-```shell
+```sh
 curl \
   -X POST \
   -H "Content-Type: application/json" \
@@ -130,7 +130,7 @@ Example 2: Does Vitalik's public address have code deployed to it? (no, it is an
 
 Request:
 
-```shell
+```sh
 curl \
   -X POST \
   -H "Content-Type: application/json" \
@@ -192,7 +192,7 @@ Example: get the revert reason of a random Uniswap v3 transaction spotted in the
 
 Request:
 
-```shell
+```sh
 curl \
   -X POST \
   -H "Content-Type: application/json" \
@@ -287,7 +287,7 @@ Example: get the first 5 transactions that touched Uniswap V1 router (which incl
 
 Request:
 
-```shell
+```sh
 curl \
   -X POST \
   -H "Content-Type: application/json" \
@@ -346,7 +346,7 @@ Example: get the 4th transaction sent by Vitalik's public address (nonce == 3).
 
 Request:
 
-```shell
+```sh
 curl \
   -X POST \
   -H "Content-Type: application/json" \
@@ -394,7 +394,7 @@ Example: get the address which deployed the Uniswap V3 Router contract.
 
 Request:
 
-```shell
+```sh
 curl \
   -X POST \
   -H "Content-Type: application/json" \

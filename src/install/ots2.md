@@ -23,7 +23,7 @@ Change Erigon CLI args to:
 
 For example, if your Erigon start command is:
 
-```shell
+```sh
 erigon \
         --http.api "eth,erigon,ots" \
         [<other CLI arguments>]
@@ -31,7 +31,7 @@ erigon \
 
 change it to:
 
-```shell
+```sh
 erigon \
         --http.api "eth,erigon,ots,ots2" \
         --experimental.ots2 \

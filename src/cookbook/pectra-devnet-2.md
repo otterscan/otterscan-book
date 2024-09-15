@@ -13,7 +13,7 @@ It is possible to run Otterscan against this devnet with some known limitations.
 ## Get the chainspec
 
 - Checkout the `pectra-devnets` repository.
-  ```shell
+  ```sh
   git clone https://github.com/ethpandaops/pectra-devnets
   ```
 - Set `$PECTRA_DEVNETS` to be this `pectra-devnets` directory.
@@ -21,17 +21,17 @@ It is possible to run Otterscan against this devnet with some known limitations.
 ## Run Erigon
 
 - Checkout and build the `docker_pectra` branch of Erigon.
-  ```shell
+  ```sh
   git clone -b docker_pectra https://github.com/erigontech/erigon
   cd erigon
   make erigon
   ```
 - Initialize the chaindata with the devnet-2 spec. Consider `$ERIGON_DATADIR` to be the EL datadir.
-  ```shell
+  ```sh
   build/bin/erigon init --datadir=$ERIGON_DATADIR $PECTRA_DEVNETS/network-configs/devnet-2/metadata/genesis.json
   ```
 - Run erigon as usual.
-  ```shell
+  ```sh
   build/bin/erigon \
     --datadir $ERIGON_DATADIR \
     --networkid 7011893082 \
@@ -46,13 +46,13 @@ It is possible to run Otterscan against this devnet with some known limitations.
 ## Run Lighthouse
 
 - Check out and build the `unstable` branch of Lighthouse.
-  ```shell
+  ```sh
   git clone -b unstable https://github.com/sigp/lighthouse
   cd lighthouse
   make
   ```
 - Run lighthouse as usual. Consider `$LH_DATADIR` is the CL datadir.
-  ```shell
+  ```sh
   target/release/lighthouse bn \
     --testnet-dir $PECTRA_DEVNETS/network-configs/devnet-2/metadata/ \
     --datadir $LH_DATADIR \
@@ -69,7 +69,7 @@ It is possible to run Otterscan against this devnet with some known limitations.
 ## Run Otterscan
 
 - Run the development build of Otterscan.
-  ```shell
+  ```sh
   docker run \
     --rm \
     --name otterscan-pectra-devnet-2 \

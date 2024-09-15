@@ -27,7 +27,7 @@ Launch an Otterscan-compatible local Ethereum RPC node hosting your development 
 
 1. Clone the Sourcify repository:
 
-    ```shell
+    ```sh
     git clone https://github.com/ethereum/sourcify.git
     ```
 
@@ -49,25 +49,25 @@ Launch an Otterscan-compatible local Ethereum RPC node hosting your development 
 
 3. Adjust the repository URL in `ui/.env.development` since for simplicity we aren't using Sourcify's h5ai-nginx file viewer:
 
-    ```shell
+    ```sh
     REACT_APP_REPOSITORY_SERVER_URL=http://localhost:5555/repository
     ```
 
 4. Build all necessary Sourcify components, notably the server and the UI:
 
-    ```shell
+    ```sh
     npm run build:clean
     ```
 
 5. Start the Sourcify server:
 
-    ```shell
+    ```sh
     NODE_ENV=development npm run server:start
     ```
 
 6. Start the Sourcify UI:
 
-    ```shell
+    ```sh
     npm run ui:start
     ```
 

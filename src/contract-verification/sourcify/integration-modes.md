@@ -32,7 +32,7 @@ The Sourcify snapshot is provided as a nginx image at: <https://hub.docker.com/r
 
 You can run it with:
 
-```shell
+```sh
 docker run \
   --rm \
   -d \
