@@ -44,12 +44,25 @@ Add the `OTS2=true` env variable when starting the docker container.
 
 For example, if your docker start command is:
 
-```shell
-docker run --rm --name otterscan -d -p 5100:80 --env ERIGON_URL="<erigon-url>" otterscan/otterscan:v2.3.0
+```sh
+docker run \
+  --rm \
+  --name otterscan \
+  -d \
+  -p 5100:80 \
+  --env ERIGON_URL="<erigon-url>" \
+  otterscan/otterscan:v2.3.0
 ```
 
 change it to:
 
-```shell
-docker run --rm --name otterscan -d -p 5100:80 --env ERIGON_URL="<erigon-url>" --env OTS2=true otterscan/otterscan:v2.3.0
+```sh
+docker run \
+  --rm \
+  --name otterscan \
+  -d \
+  -p 5100:80 \
+  --env ERIGON_URL="<erigon-url>" \
+  --env OTS2=true \
+  otterscan/otterscan:v2.3.0
 ```

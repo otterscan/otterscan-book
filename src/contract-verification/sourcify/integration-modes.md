@@ -33,7 +33,12 @@ The Sourcify snapshot is provided as a nginx image at: <https://hub.docker.com/r
 You can run it with:
 
 ```shell
-docker run --rm -d -p 3006:80 --name sourcify-snapshot otterscan/sourcify-snapshot:2021-09
+docker run \
+  --rm \
+  -d \
+  -p 3006:80 \
+  --name sourcify-snapshot \
+  otterscan/sourcify-snapshot:2021-09
 ```
 
 Stop it with:

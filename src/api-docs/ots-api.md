@@ -99,7 +99,21 @@ Example 1: does Uniswap V1 Router address have a code deployed? (yes, it is a co
 Request:
 
 ```shell
-$ curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0", "id": 1, "method":"ots_hasCode","params":["0xc0a47dFe034B400B47bDaD5FecDa2621de6c4d95", "latest"]}' http://127.0.0.1:8545
+curl \
+  -X POST \
+  -H "Content-Type: application/json" \
+  --data '
+  {
+    "jsonrpc":"2.0", 
+    "id": 1, 
+    "method":"ots_hasCode",
+    "params":
+      [
+        "0xc0a47dFe034B400B47bDaD5FecDa2621de6c4d95",
+        "latest"
+      ]
+  }' \
+  http://127.0.0.1:8545
 ```
 
 Response:
@@ -117,7 +131,21 @@ Example 2: Does Vitalik's public address have code deployed to it? (no, it is an
 Request:
 
 ```shell
-$ curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0", "id": 1, "method":"ots_hasCode","params":["0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045", "latest"]}' http://127.0.0.1:8545
+curl \
+  -X POST \
+  -H "Content-Type: application/json" \
+  --data '
+  {
+    "jsonrpc":"2.0",
+    "id": 1,
+    "method":"ots_hasCode",
+    "params":
+      [
+        "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+        "latest"
+      ]
+  }' \
+  http://127.0.0.1:8545
 ```
 
 Response:
@@ -165,7 +193,20 @@ Example: get the revert reason of a random Uniswap v3 transaction spotted in the
 Request:
 
 ```shell
-$ curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0", "id": 1, "method":"ots_getTransactionError","params":["0xcdb0e53c4f1b5f37ea7f0d2a8428b13a5bff47fb457d11ef9bc85ccdc489635b"]}' http://127.0.0.1:8545
+curl \
+  -X POST \
+  -H "Content-Type: application/json" \
+  --data '
+  {
+    "jsonrpc":"2.0",
+    "id": 1,
+    "method":"ots_getTransactionError",
+    "params":
+      [
+        "0xcdb0e53c4f1b5f37ea7f0d2a8428b13a5bff47fb457d11ef9bc85ccdc489635b"
+      ]
+  }' \
+  http://127.0.0.1:8545
 ```
 
 Response:
@@ -247,7 +288,22 @@ Example: get the first 5 transactions that touched Uniswap V1 router (which incl
 Request:
 
 ```shell
-$ curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0", "id": 1, "method":"ots_searchTransactionsAfter","params":["0xc0a47dFe034B400B47bDaD5FecDa2621de6c4d95", 0, 5]}' http://127.0.0.1:8545
+curl \
+  -X POST \
+  -H "Content-Type: application/json" \
+  --data '
+  {
+    "jsonrpc":"2.0",
+    "id": 1,
+    "method":"ots_searchTransactionsAfter",
+    "params":
+      [
+        "0xc0a47dFe034B400B47bDaD5FecDa2621de6c4d95",
+        0,
+        5
+      ]
+  }' \
+  http://127.0.0.1:8545
 ```
 
 Response:
@@ -291,7 +347,21 @@ Example: get the 4th transaction sent by Vitalik's public address (nonce == 3).
 Request:
 
 ```shell
-$ curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0", "id": 1, "method":"ots_getTransactionBySenderAndNonce","params":["0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045", 3]}' http://127.0.0.1:8545
+curl \
+  -X POST \
+  -H "Content-Type: application/json" \
+  --data '
+  {
+    "jsonrpc":"2.0",
+    "id": 1,
+    "method":"ots_getTransactionBySenderAndNonce",
+    "params":
+      [
+        "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+        3
+      ]
+  }' \
+  http://127.0.0.1:8545
 ```
 
 Response:
@@ -325,7 +395,20 @@ Example: get the address which deployed the Uniswap V3 Router contract.
 Request:
 
 ```shell
-$ curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0", "id": 1, "method":"ots_getContractCreator","params":["0xE592427A0AEce92De3Edee1F18E0157C05861564"]}' http://127.0.0.1:8545
+curl \
+  -X POST \
+  -H "Content-Type: application/json" \
+  --data '
+  {
+    "jsonrpc":"2.0",
+    "id": 1,
+    "method":"ots_getContractCreator",
+    "params":
+      [
+        "0xE592427A0AEce92De3Edee1F18E0157C05861564"
+      ]
+  }' \
+  http://127.0.0.1:8545
 ```
 
 Response:
