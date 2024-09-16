@@ -8,6 +8,7 @@ First, some context about why we chose the approach of implementing a custom API
 
 There is an ongoing effort to formalize the Otterscan API spec in the same format as the standard JSON-RPC APIs.
 
+- Online spec: <https://otterscan.github.io/execution-apis/api-documentation/>
 - The repository is at: <https://github.com/otterscan/execution-apis>.
 
 A more detailed explanation of the `ots` namespace:
