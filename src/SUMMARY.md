@@ -18,6 +18,7 @@
   - [Experimental OTS2 indexers](./install/ots2.md)
   - [Superchain support]()
   - [Other](./install/other.md)
+    - [Assets server](./install/assets-server.md)
   - [Validating the installation](./install/validating.md)
 - [Configuration](./config/README.md)
   - [Specifying the configuration](./config/reading/README.md)
