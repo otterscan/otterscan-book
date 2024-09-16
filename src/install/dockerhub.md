@@ -28,15 +28,21 @@ docker run --rm -p 5100:80 --name otterscan -d --env ERIGON_URL="<your-erigon-no
 
 You can override the entire Otterscan configuration with the `OTTERSCAN_CONFIG` env variable:
 
-```shell
-docker run --rm -p 5100:80 --name otterscan -d --env OTTERSCAN_CONFIG='{
+```sh
+docker run \
+  --rm \
+  -p 5100:80 \
+  --name otterscan \
+  -d \
+  --env OTTERSCAN_CONFIG='{
     "erigonURL": "http://127.0.0.1:8545",
     "assetsURLPrefix": "http://127.0.0.1:5175",
     "branding": {
         "siteName": "My Otterscan",
         "networkTitle": "Dev Network"
     },
-}' otterscan/otterscan:latest
+}' \
+otterscan/otterscan:latest
 ```
 
 These settings overwrite the Otterscan config file on container startup. To disable this behavior, pass `--env DISABLE_CONFIG_OVERWRITE=1` to the Docker command.

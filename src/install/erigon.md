@@ -8,7 +8,7 @@ Enabling namespaces in Erigon is done through the `--http.api` argument.
 
 ### Example
 
-```shell
+```sh
 erigon --http.api "eth,erigon,ots[,<other-namespaces>]" [<other CLI arguments...>]
 ```
 
@@ -24,6 +24,6 @@ This is done using the `--http.corsdomain` argument. Make sure it is set correct
 
 ## Example
 
-```shell
+```sh
 erigon --http.corsdomain '*' [<other CLI arguments...>]
 ```

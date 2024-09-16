@@ -23,7 +23,7 @@ Change Erigon CLI args to:
 
 For example, if your Erigon start command is:
 
-```shell
+```sh
 erigon \
         --http.api "eth,erigon,ots" \
         [<other CLI arguments>]
@@ -31,7 +31,7 @@ erigon \
 
 change it to:
 
-```shell
+```sh
 erigon \
         --http.api "eth,erigon,ots,ots2" \
         --experimental.ots2 \
@@ -44,12 +44,25 @@ Add the `OTS2=true` env variable when starting the docker container.
 
 For example, if your docker start command is:
 
-```shell
-docker run --rm --name otterscan -d -p 5100:80 --env ERIGON_URL="<erigon-url>" otterscan/otterscan:v2.3.0
+```sh
+docker run \
+  --rm \
+  --name otterscan \
+  -d \
+  -p 5100:80 \
+  --env ERIGON_URL="<erigon-url>" \
+  otterscan/otterscan:v2.3.0
 ```
 
 change it to:
 
-```shell
-docker run --rm --name otterscan -d -p 5100:80 --env ERIGON_URL="<erigon-url>" --env OTS2=true otterscan/otterscan:v2.3.0
+```sh
+docker run \
+  --rm \
+  --name otterscan \
+  -d \
+  -p 5100:80 \
+  --env ERIGON_URL="<erigon-url>" \
+  --env OTS2=true \
+  otterscan/otterscan:v2.3.0
 ```

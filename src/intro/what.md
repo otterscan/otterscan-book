@@ -1,6 +1,6 @@
 # What is it?
 
-Otterscan is a block explorer for EVM chains designed to run locally with an archive node companion—more specifically, Erigon.
+Otterscan is a block explorer for EVM chains designed to run locally with an archive node companion - more specifically, Erigon.
 
 This approach brings many advantages, as follows.
 
