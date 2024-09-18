@@ -44,7 +44,7 @@
 - [Public instances](./public_instances.md)
 - [Commercial offerings](./commercial_offerings.md)
 - [Cookbook](./cookbook/README.md)
-  - [Running Otterscan on Pectra devnet-2](./cookbook/pectra-devnet-2.md)
+  - [Running Otterscan on Pectra devnet-3](./cookbook/pectra-devnet-3.md)
   - [Ephemery testnet](./cookbook/ephemery.md)
 - [Getting in touch](./contacts.md)
 - [Acknowledgments](./acknowledgments.md)
