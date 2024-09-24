@@ -19,4 +19,4 @@ There is an experimental `ots2` namespace, which is likely to change, but here i
 
 ## Design Goals
 
-Otterscan's RPC namespaces aim to provide a minimalistic solution for Ethereum data access which overcomes the limitations of the standard JSON-RPC API. Implementing features directly in-node eliminates the need for additional indexer middleware, databases, or dependencies, reducing complexity and resource usage. Our design prioritizes simplicity and flexibility over high-performance scalability.
+Otterscan's RPC namespaces aim to provide a minimalistic solution for Ethereum data access which overcomes the limitations of the standard JSON-RPC API. Implementing features directly in-node eliminates the need for additional indexer middleware, databases, or dependencies. Our design prioritizes simplicity and flexibility over high-performance scalability.
