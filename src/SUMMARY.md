@@ -32,7 +32,6 @@
     - [Sourcify](./config/options/sourcify.md)
 - [User guide]()
 - [API Spec](./api-docs/README.md)
-  - [FAQ](./api-docs/faq.md)
   - [ots namespace spec](./api-docs/ots-api.md)
   - [ots2 EXPERIMENTAL namespace spec](./api-docs/ots2-api.md)
 - [Contract verification](./contract-verification/README.md)
