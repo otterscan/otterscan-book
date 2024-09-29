@@ -77,8 +77,11 @@ To use the local Sourcify instance, you need to point to it in Otterscan's confi
 In your Otterscan configuration JSON, specify your local Sourcify repository as the Sourcify source:
 
 ```json
-"sourcifySources": {
-  "ipfs": "http://localhost:5555/repository",
-  "central_server": "http://localhost:5555/repository"
+"sourcify": {
+  "sources": {
+    "ipfs": "http://localhost:5555/repository",
+    "central_server": "http://localhost:5555/repository"
+  },
+  "backendFormat": "RepositoryV1"
 }
 ```
