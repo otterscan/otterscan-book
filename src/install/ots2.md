@@ -25,7 +25,7 @@ For example, if your Erigon start command is:
 
 ```sh
 erigon \
-        --http.api "eth,erigon,ots" \
+        --http.api "eth,erigon,trace,ots" \
         [<other CLI arguments>]
 ```
 
@@ -33,7 +33,7 @@ change it to:
 
 ```sh
 erigon \
-        --http.api "eth,erigon,ots,ots2" \
+        --http.api "eth,erigon,trace,ots,ots2" \
         --experimental.ots2 \
         [<other CLI arguments>]
 ```
