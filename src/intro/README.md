@@ -10,16 +10,16 @@ It is also available online at: <https://docs.otterscan.io/>
 
 This chapter starts with an overview of what is Otterscan.
 
-- [What is Otterscan?](./what.md)
+- [What is Otterscan?](/intro/what.md)
 
 Then we move into a high level explanation of its architecture.
 
-- [Architecture](./architecture.md)
+- [Architecture](/intro/architecture.md)
 
 Which chains are compatible with Otterscan?
 
-- [Supported networks](./networks.md)
+- [Supported networks](/intro/networks.md)
 
 How contract verification is handled.
 
-- [Contract Verification](./verification.md)
+- [Contract Verification](/intro/verification.md)
