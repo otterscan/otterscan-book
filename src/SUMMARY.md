@@ -8,6 +8,7 @@
 - [Installation](./install/README.md)
   - [Architecture overview](./install/architecture.md)
   - [Erigon](./install/erigon.md)
+    - [Optional flags](./install/erigon-optional.md)
   - [Otterscan](./install/dockerhub.md)
   - [Beacon chain support](./install/beacon-chain/README.md)
     - [Overview](./install/beacon-chain/overview.md)
