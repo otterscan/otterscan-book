@@ -22,4 +22,4 @@ Which chains are compatible with Otterscan?
 
 How contract verification is handled.
 
-- [Contract Verification](/intro/verification.md)
+- [Contract Verification](/intro/contract-verification.md)
