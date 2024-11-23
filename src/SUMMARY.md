@@ -41,6 +41,7 @@
   - [Self-hosted Sourcify](./contract-verification/self-hosted-sourcify/README.md)
     - [Setup](./contract-verification/self-hosted-sourcify/setup.md)
     - [Verification](./contract-verification/self-hosted-sourcify/verification.md)
+    - [Lightweight Sourcify hosting](./contract-verification/lightweight-sourcify-server.md)
 - [Public instances](./public_instances.md)
 - [Commercial offerings](./commercial_offerings.md)
 - [Cookbook](./cookbook/README.md)
