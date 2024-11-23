@@ -11,3 +11,7 @@ We use Sourcify and the next section explains how the integration works.
 In case you want to run Sourcify against a devnet or a custom chain not enabled in Sourcify's official hosted service, you can run your own instance of Sourcify and point Otterscan to it.
 
 - [Self-hosted Sourcify](./self-hosted-sourcify/)
+
+You can also host a Sourcify repository using a lightweight HTTP server:
+
+- [Lightweight Self-hosted Repo](./lightweight-sourcify-server.md)
