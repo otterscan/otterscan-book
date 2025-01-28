@@ -79,9 +79,14 @@ In your Otterscan configuration JSON, specify your local Sourcify repository as 
 ```json
 "sourcify": {
   "sources": {
-    "ipfs": "http://localhost:5555/repository",
-    "central_server": "http://localhost:5555/repository"
-  },
-  "backendFormat": "RepositoryV1"
+    "Local Sourcify Repo": {
+      "url": "http://localhost:5555/repository",
+      "backendFormat": "RepositoryV2"
+    },
+    "Sourcify Servers": {
+      "url": "https://repo.sourcify.dev",
+      "backendFormat": "RepositoryV1"
+    }
+  }
 }
 ```

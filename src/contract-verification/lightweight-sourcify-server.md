@@ -42,15 +42,20 @@ You can host the extracted repository using Caddy, a lightweight, portable HTTP(
      
      </details>
 
-3. Update the Otterscan config. Your Sourcify repository is now hosted at `http://localhost:7877`. Update your Otterscan config to point to your new repository URL:
+3. Update the Otterscan config. Your Sourcify repository is now hosted at `http://localhost:7877`. Add an entry in your Otterscan config to point to your new repository URL:
 
    ```json
    "sourcify": {
      "sources": {
-       "ipfs": "http://localhost:7877",
-       "central_server": "http://localhost:7877"
-     },
-     "backendFormat": "RepositoryV2"
+       "Local Sourcify Repo": {
+         "url": "http://localhost:7877",
+         "backendFormat": "RepositoryV2"
+       },
+       "Sourcify Servers": {
+         "url": "https://repo.sourcify.dev",
+         "backendFormat": "RepositoryV1"
+       }
+     }
    }
    ```
 
