@@ -1,6 +1,6 @@
 # Alternative Sourcify sources
 
-Otterscan uses smart contract metadata to decode function parameters, name smart contract addresses, and show sources. By default, this data comes from the official Sourcify servers. We encourage you to [self-host this Sourcify data](../../contract-verification/lightweight-sourcify-server.md) to prevent your browsing activity from being leaked to Sourcify, to increase the loading speed of this data, to ensure continued availability of the data, and to reduce the load on Sourcify servers.
+Otterscan uses smart contract metadata to decode function parameters, name smart contract addresses, and show sources. By default, this data comes from the official Sourcify servers. We encourage you to [self-host this Sourcify data](../../contract-verification/lightweight-sourcify-server.md) to prevent your browsing activity from being leaked to Sourcify, increase the loading speed of this data, ensure continued availability of the data, and reduce the load on Sourcify servers.
 
 Rather than using `repo.sourcify.dev`, you may specify your own Sourcify root URLs in the configuration file by adding the `sourcify` key and adding objects to `sources`:
 
