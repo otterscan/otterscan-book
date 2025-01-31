@@ -24,10 +24,11 @@ VITE_CONFIG_JSON='
   },
   "sourcify": {
     "sources": {
-      "ipfs": "https://ipfs.io/ipns/repo.sourcify.dev",
-      "central_server": "https://repo.sourcify.dev"
-    },
-    "backendFormat": "RepositoryV1"
+      "Sourcify Servers": {
+        "url": "https://repo.sourcify.dev",
+        "backendFormat": "RepositoryV1"
+      }
+    }
   }
 }
 '
