@@ -6,7 +6,7 @@ Otterscan runs on any network that has a client implementing the Otterscan API. 
 
 - Ethereum
   - Mainnet
-  - Sepolia and Holesky testnets
+  - Sepolia, Holesky and Hoodi testnets
 - Gnosis Chain
   - Gnosis mainnet
   - Chiado testnet

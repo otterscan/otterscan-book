@@ -6,6 +6,7 @@ However, we host some testnet instances as a showcase of our features:
 
 - Sepolia testnet: <https://sepolia.otterscan.io/>
 - Holesky testnet: <https://holesky.otterscan.io/>
+- Hoodi testnet: <https://hoodi.otterscan.io/>
 
 ## Third parties
 
