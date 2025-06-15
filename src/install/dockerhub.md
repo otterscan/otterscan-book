@@ -20,11 +20,23 @@ To stop the Otterscan service, run:
 docker stop otterscan
 ```
 
+### Specifying config settings
+
 By default, it assumes your Erigon node is at `http://127.0.0.1:8545`, and users' browsers will try to connect to this RPC URL. You can override the URL by setting the `ERIGON_URL` env variable in the container:
 
 ```
 docker run --rm -p 5100:80 --name otterscan -d --env ERIGON_URL="<your-erigon-node-url>" otterscan/otterscan:<versiontag>
 ```
+
+These are the environment variables you can set:
+
+| Environment Variable | Description                                                                |
+|:---------------------|:---------------------------------------------------------------------------|
+| `OTTERSCAN_CONFIG`   | Specifies the entire Otterscan configuration in JSON **(subsumes other vars)** |
+| `ERIGON_URL`         | Erigon execution RPC URL                                                   |
+| `BEACON_API_URL`     | Consensus client RPC URL                                                   |
+| `ASSETS_URL_PREFIX`  | [Assets server](./assets-server.md) URL prefix (without trailing slash)    |
+| `OTS2`               | Indicates whether to use the experimental ots2 namespace. `true` or `false` |
 
 You can override the entire Otterscan configuration with the `OTTERSCAN_CONFIG` env variable:
 
