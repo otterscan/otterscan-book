@@ -23,4 +23,4 @@ Otterscan runs on any network that has a client implementing the Otterscan API. 
 
 - Local devnets
 
-Anvil [implements the Otterscan API](https://book.getfoundry.sh/reference/anvil/#otterscan-methods), so you can point your Otterscan installation to an Anvil RPC endpoint and have an explorer for your local devnet.
+Anvil [implements the Otterscan API](https://getfoundry.sh/anvil/reference/#otterscan-methods), so you can point your Otterscan installation to an Anvil RPC endpoint and have an explorer for your local devnet.
