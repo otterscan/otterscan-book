@@ -14,7 +14,7 @@ jobs:
       deployments: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Install latest mdbook
         run: |
           url="https://github.com/rust-lang/mdbook/releases/download/$MDBOOK_VERSION/mdbook-$MDBOOK_VERSION-x86_64-unknown-linux-gnu.tar.gz"
