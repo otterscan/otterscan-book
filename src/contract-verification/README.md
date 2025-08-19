@@ -15,3 +15,7 @@ In case you want to run Sourcify against a devnet or a custom chain not enabled 
 You can also host a Sourcify repository using a lightweight HTTP server:
 
 - [Lightweight Self-hosted Repo](./lightweight-sourcify-server.md)
+
+Otterscan lets you verify that contract data from Sourcify is accurate:
+
+- [Local Contract Verification](./local-contract-verification.md)
