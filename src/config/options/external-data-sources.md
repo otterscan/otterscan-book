@@ -7,10 +7,13 @@ Configure your instance's Sourcify sources to specify where contract sources are
 * [Sourcify](./sourcify.md)
 
 ### Solidity compiler downloads
-Otterscan's [local contract verification](../../contract-verification/local-contract-verification.md) feature has to download the Solidity compiler in order to recompile the contract sources in your browser and check whether they match the on-chain bytecode. By default, these are downloaded from `https://binaries.soliditylang.org`, but you can change the source in your Otterscan config:
+Otterscan's [local contract verification](../../contract-verification/local-contract-verification.md) feature has to download the Solidity compiler in order to recompile the contract sources in your browser and check whether they match the on-chain bytecode. By default, these are downloaded from `https://binaries.soliditylang.org`, but you can change the source or disable the feature in your Otterscan config:
 
 ```json
-  "externalDataSources": {
-    "contractCompilerBaseURL": "https://binaries.soliditylang.org"
+  "sourcify": {
+    "localContractVerification": {
+      "enabled": true,
+      "contractCompilerBaseURL": "https://binaries.soliditylang.org"
+    }
   }
 ```

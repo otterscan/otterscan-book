@@ -10,4 +10,4 @@ Once it finishes, check the badge at the bottom to see the result:
 
 <img src="./images/local-verification-complete.png" width="750" />
 
-Note that the Solidity compiler is downloaded from `binaries.soliditylang.org` when you run a local verification. You can change the source by setting the [`externalDataSources.contractCompilerBaseURL` config option](../config/options/external-data-sources.md).
+**Note:** The Solidity compiler is downloaded from `binaries.soliditylang.org` when you run a local verification. You can change the source, or disable this feature entirely, by setting the [`sourcify.localContractVerification` config options](../config/options/external-data-sources.md#solidity-compiler-downloads).
