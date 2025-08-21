@@ -19,3 +19,7 @@ If you are running Otterscan against a non-standard chain, but you are sure Erig
 In case you are running your own Sourcify instance, that's configurable as well.
 
 - [Alternative Sourcify sources](./sourcify.md)
+
+You can configure how Otterscan fetches data from external sources.
+
+- [External data sources](./external-data-sources.md)
