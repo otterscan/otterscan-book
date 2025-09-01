@@ -17,3 +17,16 @@ Otterscan's [local contract verification](../../contract-verification/local-cont
     }
   }
 ```
+
+### CCIP reads
+By default, Otterscan supports [CCIP reads](https://eips.ethereum.org/EIPS/eip-3668) during ENS lookups and reverse lookups only. CCIP reads fetch data from arbitrary external sources; for example, looking up the ENS name `jesse.cb.id` causes an external data request to `api.coinbase.com` to fetch the corresponding address. CCIP reads can be triggered by reverse lookups, too, and Otterscan makes these over the course of regular browsing to display ENS names. Although this feature is enabled by default, **if you value privacy, we recommend you disable CCIP reads** because they leak your IP address to external parties. Disabling CCIP reads will affect ENS address lookups for certain ENS subdomains.
+
+To disable CCIP reads for ENS lookups, set `ensLookups` to `false` under `externalDataSources`/`ccip` in your Otterscan config:
+
+```json
+  "externalDataSources": {
+    "ccip": {
+      "ensLookups": false
+    }
+  }
+```
