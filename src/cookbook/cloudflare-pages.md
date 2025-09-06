@@ -30,7 +30,7 @@ Do:
 git clone 
 ```
 
-3. Checkout the stable branch `main`.
+3. Check out the stable branch `main`.
 
 ```sh
 git checkout main
@@ -80,9 +80,9 @@ Now you have a clone of Otterscan ready to be deployed according to your configu
 
     ![Cloudflare Pages deployed](./images/cf-pages-deployed.png)
 
-> ⚠️ The `*.pages.dev` domain Cloudflare gives you is public and anyone who knows it can access your application.
+> ⚠️ The `*.pages.dev` subdomain Cloudflare gives you is public and anyone who knows it can access your application.
 
-6. You should now be able to open *project-name*.pages.dev in your browser and it'll open Otterscan making use of your configure Erigon node.
+6. You should now be able to open *project-name*.pages.dev in your browser and it'll open Otterscan making use of your configured Erigon node.
 
     ![Cloudflare Pages finished](./images/cf-pages-finished.png)
 
@@ -95,6 +95,6 @@ Congratulations! You now have a working Otterscan instance! 🎉
 There are other things you can do from here:
 
 - Configure a [custom domain](https://developers.cloudflare.com/pages/configuration/custom-domains/).
-- Setup deployment pipelines for production/development instances on Cloudflare Pages.
+- Set up deployment pipelines for production/development instances on Cloudflare Pages.
 - Configure more aggressive caching.
 - Add other [configuration options](../config/options/) to the `.env.production` file.
