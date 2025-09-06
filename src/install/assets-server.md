@@ -2,7 +2,7 @@
 
 Otterscan can make use of several external data sources to give context to on-chain data. The external data sources are served to Otterscan clients at the location given by the `assetsURLPrefix` config option.  Note: Do not set `assetURLPrefix` to `/assets` or it will conflict with Otterscan's base assets path.
 
-Typically, these assets are served using the `otterscan/otterscan-assets` Docker image from the [otterscan-assets](https://github.com/otterscan/otterscan-assets) repository. In a development environment, you can use `npm run assets-start` and `npm run assets-stop` to run the Docker commands.
+Typically, these assets are served using the `otterscan/otterscan-assets` Docker image from the [otterscan-assets](https://github.com/otterscan/otterscan-assets) repository. In a development environment, you can use `pnpm run assets-start` and `pnpm run assets-stop` to run the Docker commands.
 
 Setups requiring custom or private data can serve assets manually following the same structure.
 

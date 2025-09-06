@@ -15,7 +15,7 @@ Clone Otterscan repo.
 ```
 git clone https://github.com/otterscan/otterscan.git
 cd otterscan
-npm run docker-build
+pnpm docker-build
 ```
 
 This will run the entire build process inside a build container, merge the production build of the React app with pre-made assets from `otterscan-assets` project into the same image format it is published in Docker Hub, but locally under the name `otterscan`.
@@ -23,9 +23,9 @@ This will run the entire build process inside a build container, merge the produ
 Then you can start/stop it using the commands:
 
 ```
-npm run docker-start
+pnpm docker-start
 <browse locally on http://localhost:5273>
-npm run docker-stop
+pnpm docker-stop
 ```
 
 ## (Alternative 2) Run a development build from the source
@@ -37,7 +37,7 @@ First, a brief explanation about the app:
 
 These instructions are subjected to changes in future for the sake of simplification.
 
-Make sure you have a working node 20/npm 10 installation.
+Make sure you have a working node 22/pnpm 10 installation.
 
 By default, it assumes your `erigon` process is serving requests at <http://localhost:8545>, a beacon chain REST API serves requests at <http://localhost:5052>, and assets are hosted at <http://localhost:5175>.
 
@@ -52,13 +52,13 @@ VITE_ASSETS_URL=<your-assets-endpoint>
 Start serving the assets server by running the following Docker image:
 
 ```
-npm run assets-start
+pnpm assets-start
 ```
 
 To stop it, run:
 
 ```
-npm run assets-stop
+pnpm assets-stop
 ```
 
 By default they run at <http://localhost:5175>
@@ -66,8 +66,8 @@ By default they run at <http://localhost:5175>
 To run Otterscan development build:
 
 ```
-npm ci
-npm start
+pnpm i
+pnpm start
 ```
 
 Otterscan should now be running at <http://localhost:5173>
