@@ -48,6 +48,7 @@
 - [Commercial offerings](./commercial_offerings.md)
 - [Cookbook](./cookbook/README.md)
   - [Ephemery testnet](./cookbook/ephemery.md)
+  - [Hosting Otterscan on Cloudflare Pages](./cookbook/cloudflare-pages.md)
 - [Getting in touch](./contacts.md)
 - [Acknowledgments](./acknowledgments.md)
 - [License](./license.md)
