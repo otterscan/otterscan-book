@@ -244,18 +244,25 @@ Returns:
 
 ### `ots_getBlockTransactions`
 
-Gets paginated transaction data for a certain block. Think of an optimized `eth_getBlockBy*` + `eth_getTransactionReceipt`.
+Gets paginated transaction data for a certain block. Think of it as an optimized `eth_getBlockBy*` + `eth_getTransactionReceipt`.
 
-The `transactions` field contains the transaction list with their bodies in a similar format of `eth_getBlockBy*` with transaction bodies, with a few differences:
+Parameters:
 
-- the `input` field returns only the 4 bytes method selector instead of the entire calldata byte blob.
+1. `number` - The block number whose transactions will be returned.
+2. `pageNumber` - Zero-indexed page number of transactions to return. The first page, at page `0`, contains the last transactions of the block.
+3. `pageSize` - How many transactions are returned per page.
 
-The `receipts` attribute contains the transactions receipt list, in the same sort order as the block transactions. Returning it here prevents the caller from making N+1 separate calls (`eth_getBlockBy*` and `eth_getTransactionReceipt`).
+Returns:
 
-For receipts, it differs from the `eth_getTransactionReceipt` object format:
-
-- `logs` attribute returns `null`.
-- `logsBloom` attribute returns `null`.
+- `object` containing the following fields:
+  - `fullBlock` - An object equivalent to `eth_getBlockByNumber` with the following changes:
+    1. The `transactions` field is included, containing only the transactions on the requested page.
+        - Note: The `input` field returns only the first 4 bytes instead of the entire calldata.
+    2. A `transactionCount` field (number) is added, which is the number of transactions in the entire block.
+    3. `logsBloom` is set to `null`.
+  - `receipts` - A list of transaction receipts for the transactions on the requested page, with the following differences from `eth_getTransactionReceipt` receipt objects:
+    1. The `logs` attribute is set to `null`.
+    2. The `logsBloom` attribute is set to `null`.
 
 ### `ots_searchTransactionsBefore` and `ots_searchTransactionsAfter`
 
