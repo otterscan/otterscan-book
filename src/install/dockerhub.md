@@ -52,7 +52,7 @@ docker run \
     "branding": {
         "siteName": "My Otterscan",
         "networkTitle": "Dev Network"
-    },
+    }
 }' \
 otterscan/otterscan:latest
 ```
